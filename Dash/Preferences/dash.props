@@ -1,0 +1,42 @@
+_version: 1012
+DebugUI.OpenedGroups:
+    -   root
+EditorUI.debugHostName: localhost
+EditorUI.showBrowser: false
+EditorUI.showCpuProfiling: false
+EditorUI.showGpuProfiling: false
+EditorUI.showGpuStats: false
+EditorUI.showInspector: false
+EditorUI.showJsConsole: false
+EditorUI.showMemoryUsage: false
+EditorUI.showParticleEditor: false
+EditorUI.showToolSize: false
+EditorUI.showUndoRedo: false
+FavoriteFolders:
+    []
+GlobalSettings:
+    GlobalSettings:
+        DialogSize: 0
+        Language: 0
+        FontSize: 1
+        DoublePressSpeed: -1
+        SunDirection: [0, 0.955779, 0.2940859]
+        SunBrightness: 1
+        SunColor: [0.8, 0.8, 0.8]
+        BackgroundColor: [0.05, 0.05, 0.05]
+        SkyboxEnabled: true
+        GroundPlaneEnabled: true
+        BloomEnabled: true
+        VoiceChatVolume: 0.5
+        AmbientSoundsEnabled: true
+        ToolsMuted: false
+        GlobalVolume: 1
+        AutoSaveEnabled: true
+        SaveSessionSettings: true
+        TooltipsEnabled: true
+        FirstTimeUser: true
+        VibrationEnabled: true
+        AvatarHandsEnabled: true
+TestProp: ""
+graphics.msaaEnabled: true
+primaryHand: Right
