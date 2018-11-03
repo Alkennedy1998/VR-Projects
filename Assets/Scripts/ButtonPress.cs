@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class ButtonPress : MonoBehaviour
 {
+    //Get all map light objects
+    GameObject[] mapLights = GameObject.FindGameObjectsWithTag("mapLights");
 
-
+    public ConstantForce gravity;
+    private Vector3 gForce = new Vector3(0.0f, -6.81f, 0.0f);
     // Use this for initialization
-    public float radius = 50.0F;
-    public float power = 100.0F;
+    private readonly float radius = 0.9f;
+    private float power = 150000;
 
     public Vector3 startPosition;
     public Vector3 endPosition;
@@ -21,8 +24,14 @@ public class ButtonPress : MonoBehaviour
 
     private int isTriggered = 0;
 
+
     void Start()
     {
+        //Get list of all map lights
+
+
+
+
         startPosition = transform.parent.position;
         endPosition = transform.parent.position+Vector3.up*distance;
         //endPosition = new Vector3(transform.parent.position.x, (transform.parent.position.y - 7), transform.parent.position.z);
@@ -64,26 +73,59 @@ public class ButtonPress : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
-        //Begin button y transform
+        //Randomly select explosion position from an array of 14 different positions
+       
 
+        GameObject parent = GameObject.Find("Explosions");
+        List<Vector3> locations = new List<Vector3>();
+        foreach(Transform child in parent.transform)
+        {
+            //Debug.Log(child.gameObject.name);
+            locations.Add(child.transform.position);
+        }
 
-        Vector3 explosionPos = GameObject.Find("BOD").transform.position;
+        Vector3 explosionPos = locations[Random.Range(0, parent.transform.childCount)];
 
-        Debug.Log("You pressed the button");
+        //Array of all colliders within the radius
         Collider[] colliders = Physics.OverlapSphere(explosionPos, radius);
+
+
+
+  
+        //Perform action on each ragdoll
         foreach (Collider hit in colliders)
         {
-            Rigidbody rb = hit.GetComponent<Rigidbody>();
+            if (hit.gameObject!=null&&hit.gameObject.CompareTag("ragdoll"))
+            { 
+                //Explosions and all things included
+               hit.attachedRigidbody.useGravity = true;            
+          
+                Rigidbody rb = hit.GetComponent<Rigidbody>();
 
-            if (rb != null)
-                rb.AddExplosionForce(power, explosionPos, radius, 3.0F);
+                if (rb != null)
+                    rb.AddExplosionForce(power, explosionPos, radius, 3.0F);
+            }
+            
+        }
+
+        //Turn a random light on
+
+        int oneOrTwo = Random.Range(0, 1);
+        int lightRange = Random.Range(0, mapLights.Count());
+        if (oneOrTwo == 0)
+        {
+            mapLights[lightRange].transform.Find("Point Light").gameObject.Light.color = Color.red;
+        }
+        else
+        {
+            mapLights[lightRange].transform.Find("Point Light").gameObject.Light.color = Color.white;
         }
 
         isTriggered = 1;
-        //transform.parent.position = Vector3.Lerp(startPosition, endPosition, Time.deltaTime*0.1f);
 
     }
 
+   
     void OnTriggerExit(Collider col)
     {
         isTriggered = 2;
