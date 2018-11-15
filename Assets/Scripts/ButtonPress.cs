@@ -5,7 +5,8 @@ using UnityEngine;
 public class ButtonPress : MonoBehaviour
 {
     //Get all map light objects
-    GameObject[] mapLights = GameObject.FindGameObjectsWithTag("mapLights");
+    // GameObject[] mapLights = GameObject.FindGameObjectsWithTag("mapLights");
+    public GameObject[] mapLights;
 
     public ConstantForce gravity;
     private Vector3 gForce = new Vector3(0.0f, -6.81f, 0.0f);
@@ -16,10 +17,10 @@ public class ButtonPress : MonoBehaviour
     public Vector3 startPosition;
     public Vector3 endPosition;
 
-    private float distance = -.05f;
+    float lerpTime = 1f;
+    float currentLerpTime;
+    private float moveDistance = -.05f;
 
-    private float currentLerpTime = 0;
-    private float lerpTime = 5;
     //public Transform parentButton = transform.parent;
 
     private int isTriggered = 0;
@@ -31,9 +32,11 @@ public class ButtonPress : MonoBehaviour
 
 
 
+        GameObject[] mapLights = GameObject.FindGameObjectsWithTag("mapLights");
+        Debug.Log(mapLights[0]);
 
         startPosition = transform.parent.position;
-        endPosition = transform.parent.position+Vector3.up*distance;
+        endPosition = transform.parent.position+Vector3.up*moveDistance;
         //endPosition = new Vector3(transform.parent.position.x, (transform.parent.position.y - 7), transform.parent.position.z);
     }
 
@@ -41,40 +44,25 @@ public class ButtonPress : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isTriggered == 1||isTriggered==2)
+        currentLerpTime += Time.deltaTime;
+        if (currentLerpTime > lerpTime)
         {
-
-
-            currentLerpTime += Time.deltaTime;
-            if (currentLerpTime >= lerpTime)
-            {
-                currentLerpTime = lerpTime;
-            }
-
-            float Perc = currentLerpTime / lerpTime;
-
-            if (isTriggered == 1)
-            {
-                transform.parent.position = endPosition;
-                //transform.parent.position = Vector3.Lerp(startPosition, endPosition, Perc);
-            }
-            if(isTriggered == 2)
-            {
-                transform.parent.position = startPosition;
-                //transform.parent.position = Vector3.Lerp(endPosition, startPosition, Perc);
-            }
- 
-            isTriggered = 0;
+            currentLerpTime = lerpTime;
         }
-    }
 
-
-
+        //lerp!
+        float perc = currentLerpTime / lerpTime;
+        //transform.position = Vector3.Lerp(startPosition, endPosition, perc);
+    
+}
 
     void OnTriggerEnter(Collider col)
     {
+
+        //Begin Lerp
+        currentLerpTime = 0f;
         //Randomly select explosion position from an array of 14 different positions
-       
+
 
         GameObject parent = GameObject.Find("Explosions");
         List<Vector3> locations = new List<Vector3>();
@@ -109,22 +97,33 @@ public class ButtonPress : MonoBehaviour
         }
 
         //Turn a random light on
-
+        int lightRange = 0;
         int oneOrTwo = Random.Range(0, 1);
-        int lightRange = Random.Range(0, mapLights.Count());
+        //int lightRange = Random.Range(0, mapLights.Length);
+        Debug.Log(mapLights[0]);
+
         if (oneOrTwo == 0)
         {
-            mapLights[lightRange].transform.Find("Point Light").gameObject.Light.color = Color.red;
+            //mapLights[lightRange].transform.Find("Point Light").gameObject.Light.color = Color.red;
+            //mapLights[lightRange].transform.GetChild(3).gameObject.GetComponent<Light>().intensity = 100;
+            //mapLights[lightRange].GetComponent<Light>().intensity = 100;
+            //mapLights[lightRange].GetComponent<Light>().color =Color.red;
         }
         else
         {
-            mapLights[lightRange].transform.Find("Point Light").gameObject.Light.color = Color.white;
-        }
+            //mapLights[lightRange].transform.Find("Point Light").gameObject.Light.color = Color.white;
+            //mapLights[lightRange].transform.Find("Point Light").gameObject.Intensity = 100;
+            //mapLights[lightRange].transform.GetChild(3).Intensity = 100;
+            //mapLights[lightRange].GetComponent<Light>().intensity = 100;
+            //mapLights[lightRange].GetComponent<Light>().color = Color.white;
 
+
+        }
+        
         isTriggered = 1;
 
     }
-
+    
    
     void OnTriggerExit(Collider col)
     {

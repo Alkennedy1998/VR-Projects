@@ -546,7 +546,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 16745755}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -40.28, y: -5.6152525, z: 23.110008}
+  m_LocalPosition: {x: -40.28, y: -7.27, z: 23.110008}
   m_LocalScale: {x: 0.40376258, y: 0.40376258, z: 0.40376258}
   m_Children: []
   m_Father: {fileID: 601742555}
@@ -4063,7 +4063,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 159985021}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -30.69898, y: -5.6152525, z: 7.000575}
+  m_LocalPosition: {x: -30.69898, y: -7.270001, z: 7.000575}
   m_LocalScale: {x: 0.40376663, y: 0.40376663, z: 0.40376663}
   m_Children: []
   m_Father: {fileID: 601742555}
@@ -5572,7 +5572,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 229480244}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -35.57, y: -5.6152525, z: 20.970001}
+  m_LocalPosition: {x: -35.57, y: -7.270001, z: 20.970001}
   m_LocalScale: {x: 0.40376258, y: 0.40376258, z: 0.40376258}
   m_Children: []
   m_Father: {fileID: 601742555}
@@ -7326,7 +7326,7 @@ GameObject:
   - component: {fileID: 295045892}
   m_Layer: 0
   m_Name: Point Light
-  m_TagString: Untagged
+  m_TagString: pointLights
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7458,11 +7458,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 168962, guid: ce816f2e6abb0504092c23ed9b970dfd,
     type: 2}
   m_PrefabInternal: {fileID: 1573944434}
---- !u!4 &296917989 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 477154, guid: ce816f2e6abb0504092c23ed9b970dfd,
-    type: 2}
-  m_PrefabInternal: {fileID: 1573944434}
 --- !u!135 &296917990
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -7489,10 +7484,9 @@ MonoBehaviour:
   grabBegin: 0.55
   grabEnd: 0.35
   m_parentHeldObject: 0
-  m_gripTransform: {fileID: 296917989}
-  m_grabVolumes:
-  - {fileID: 296917990}
-  m_controller: 1
+  m_gripTransform: {fileID: 0}
+  m_grabVolumes: []
+  m_controller: 0
   m_parentTransform: {fileID: 0}
 --- !u!54 &296917992
 Rigidbody:
@@ -7844,7 +7838,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 307145621}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -44.99, y: -5.6152525, z: 7.000575}
+  m_LocalPosition: {x: -44.99, y: -7.270001, z: 7.000575}
   m_LocalScale: {x: 0.40376258, y: 0.40376258, z: 0.40376258}
   m_Children: []
   m_Father: {fileID: 601742555}
@@ -9939,7 +9933,7 @@ GameObject:
   - component: {fileID: 358477491}
   m_Layer: 0
   m_Name: Point Light
-  m_TagString: Untagged
+  m_TagString: pointLights
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10570,7 +10564,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 380124516}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -42.62, y: -5.6152525, z: 20.970001}
+  m_LocalPosition: {x: -42.62, y: -7.270001, z: 20.970001}
   m_LocalScale: {x: 0.40376258, y: 0.40376258, z: 0.40376258}
   m_Children: []
   m_Father: {fileID: 601742555}
@@ -10919,7 +10913,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 399398675}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -37.81, y: -5.6152525, z: 20.970001}
+  m_LocalPosition: {x: -37.81, y: -7.270001, z: 20.970001}
   m_LocalScale: {x: 0.40376258, y: 0.40376258, z: 0.40376258}
   m_Children: []
   m_Father: {fileID: 601742555}
@@ -11265,7 +11259,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 422469502}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -40.4, y: -5.6152525, z: 20.970001}
+  m_LocalPosition: {x: -40.4, y: -7.270001, z: 20.970001}
   m_LocalScale: {x: 0.40376258, y: 0.40376258, z: 0.40376258}
   m_Children: []
   m_Father: {fileID: 601742555}
@@ -12327,7 +12321,7 @@ GameObject:
   - component: {fileID: 460524722}
   m_Layer: 0
   m_Name: Point Light
-  m_TagString: Untagged
+  m_TagString: pointLights
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13726,7 +13720,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 521167721}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -35.56, y: -5.6152525, z: 4.729987}
+  m_LocalPosition: {x: -35.56, y: -7.270001, z: 4.729987}
   m_LocalScale: {x: 0.40376258, y: 0.40376258, z: 0.40376258}
   m_Children: []
   m_Father: {fileID: 601742555}
@@ -14130,7 +14124,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 534341713}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -45.43, y: -5.6152525, z: 4.729987}
+  m_LocalPosition: {x: -45.43, y: -7.270001, z: 4.729987}
   m_LocalScale: {x: 0.40376258, y: 0.40376258, z: 0.40376258}
   m_Children: []
   m_Father: {fileID: 601742555}
@@ -15014,7 +15008,7 @@ GameObject:
   - component: {fileID: 552736846}
   m_Layer: 0
   m_Name: Point Light
-  m_TagString: Untagged
+  m_TagString: pointLights
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15110,7 +15104,7 @@ GameObject:
   - component: {fileID: 556750323}
   m_Layer: 0
   m_Name: Point Light
-  m_TagString: Untagged
+  m_TagString: pointLights
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17553,8 +17547,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23cbd709ee2b3c14aafa7aea5170936b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 50
-  power: 100
+  mapLights: []
+  gravity: {fileID: 0}
   startPosition: {x: 0, y: 0, z: 0}
   endPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &670293515 stripped
@@ -18138,7 +18132,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 690060646}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -35.68, y: -5.6152525, z: 7.000575}
+  m_LocalPosition: {x: -35.68, y: -7.270001, z: 7.000575}
   m_LocalScale: {x: 0.40376258, y: 0.40376258, z: 0.40376258}
   m_Children: []
   m_Father: {fileID: 601742555}
@@ -19230,7 +19224,7 @@ GameObject:
   - component: {fileID: 730997575}
   m_Layer: 0
   m_Name: Point Light
-  m_TagString: Untagged
+  m_TagString: pointLights
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20433,7 +20427,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 778338890}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -40.41, y: -5.6152525, z: 7.000575}
+  m_LocalPosition: {x: -40.41, y: -7.270001, z: 7.000575}
   m_LocalScale: {x: 0.40376258, y: 0.40376258, z: 0.40376258}
   m_Children: []
   m_Father: {fileID: 601742555}
@@ -21815,7 +21809,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 834909096}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -38.01, y: -5.6152525, z: 7.000575}
+  m_LocalPosition: {x: -38.01, y: -7.270001, z: 7.000575}
   m_LocalScale: {x: 0.40376258, y: 0.40376258, z: 0.40376258}
   m_Children: []
   m_Father: {fileID: 601742555}
@@ -23757,7 +23751,7 @@ GameObject:
   - component: {fileID: 926656284}
   m_Layer: 0
   m_Name: Point Light
-  m_TagString: Untagged
+  m_TagString: pointLights
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23856,8 +23850,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23cbd709ee2b3c14aafa7aea5170936b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 50
-  power: 100
+  mapLights: []
+  gravity: {fileID: 0}
   startPosition: {x: 0, y: 0, z: 0}
   endPosition: {x: 0, y: 0, z: 0}
 --- !u!114 &942163301
@@ -23871,8 +23865,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23cbd709ee2b3c14aafa7aea5170936b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 50
-  power: 100
+  mapLights: []
+  gravity: {fileID: 0}
   startPosition: {x: 0, y: 0, z: 0}
   endPosition: {x: 0, y: 0, z: 0}
 --- !u!4 &950606965 stripped
@@ -23989,7 +23983,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 953705499}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -33.33, y: -5.6152525, z: 23.110008}
+  m_LocalPosition: {x: -33.33, y: -7.270001, z: 23.110008}
   m_LocalScale: {x: 0.40376258, y: 0.40376258, z: 0.40376258}
   m_Children: []
   m_Father: {fileID: 601742555}
@@ -24061,7 +24055,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 953882762}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -31.11, y: -5.6152525, z: 23.110008}
+  m_LocalPosition: {x: -31.11, y: -7.270001, z: 23.110008}
   m_LocalScale: {x: 0.40376258, y: 0.40376258, z: 0.40376258}
   m_Children: []
   m_Father: {fileID: 601742555}
@@ -25453,7 +25447,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1007142421}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -35.52, y: -5.6152525, z: 23.110008}
+  m_LocalPosition: {x: -35.52, y: -7.270001, z: 23.110008}
   m_LocalScale: {x: 0.40376258, y: 0.40376258, z: 0.40376258}
   m_Children: []
   m_Father: {fileID: 601742555}
@@ -30178,7 +30172,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1170830560}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -30.97, y: -5.6152525, z: 20.970001}
+  m_LocalPosition: {x: -30.97, y: -7.270001, z: 20.970001}
   m_LocalScale: {x: 0.40376258, y: 0.40376258, z: 0.40376258}
   m_Children: []
   m_Father: {fileID: 601742555}
@@ -32788,7 +32782,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1272910243}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -37.85, y: -5.6152525, z: 4.729987}
+  m_LocalPosition: {x: -37.85, y: -7.270001, z: 4.729987}
   m_LocalScale: {x: 0.40376258, y: 0.40376258, z: 0.40376258}
   m_Children: []
   m_Father: {fileID: 601742555}
@@ -36055,7 +36049,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1368117335}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -33.29, y: -5.6152525, z: 20.970001}
+  m_LocalPosition: {x: -33.29, y: -7.270001, z: 20.970001}
   m_LocalScale: {x: 0.40376258, y: 0.40376258, z: 0.40376258}
   m_Children: []
   m_Father: {fileID: 601742555}
@@ -37162,7 +37156,7 @@ GameObject:
   - component: {fileID: 1409021184}
   m_Layer: 0
   m_Name: Point Light
-  m_TagString: Untagged
+  m_TagString: pointLights
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -38013,7 +38007,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1454814214}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -33.319996, y: -5.6152525, z: 7.000575}
+  m_LocalPosition: {x: -33.319996, y: -7.270001, z: 7.000575}
   m_LocalScale: {x: 0.40376258, y: 0.40376258, z: 0.40376258}
   m_Children: []
   m_Father: {fileID: 601742555}
@@ -38351,7 +38345,7 @@ GameObject:
   - component: {fileID: 1471982501}
   m_Layer: 0
   m_Name: Point Light
-  m_TagString: Untagged
+  m_TagString: pointLights
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -40982,7 +40976,7 @@ GameObject:
   - component: {fileID: 1576421830}
   m_Layer: 0
   m_Name: Point Light
-  m_TagString: Untagged
+  m_TagString: pointLights
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -41629,8 +41623,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23cbd709ee2b3c14aafa7aea5170936b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 50
-  power: 100
+  mapLights: []
+  gravity: {fileID: 0}
   startPosition: {x: 0, y: 0, z: 0}
   endPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &1592815801
@@ -42663,7 +42657,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1610669785}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -37.86, y: -5.6152525, z: 23.110008}
+  m_LocalPosition: {x: -37.86, y: -7.270001, z: 23.110008}
   m_LocalScale: {x: 0.40376258, y: 0.40376258, z: 0.40376258}
   m_Children: []
   m_Father: {fileID: 601742555}
@@ -43667,7 +43661,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1668477420}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -42.78, y: -5.6152525, z: 4.729987}
+  m_LocalPosition: {x: -42.78, y: -7.270001, z: 4.729987}
   m_LocalScale: {x: 0.40376258, y: 0.40376258, z: 0.40376258}
   m_Children: []
   m_Father: {fileID: 601742555}
@@ -43876,7 +43870,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1671472632}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -30.69898, y: -5.6152525, z: 4.73}
+  m_LocalPosition: {x: -30.69898, y: -7.270001, z: 4.73}
   m_LocalScale: {x: 0.40376258, y: 0.40376258, z: 0.40376258}
   m_Children: []
   m_Father: {fileID: 601742555}
@@ -44158,7 +44152,7 @@ GameObject:
   - component: {fileID: 1692970091}
   m_Layer: 0
   m_Name: Point Light
-  m_TagString: Untagged
+  m_TagString: pointLights
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44946,7 +44940,7 @@ GameObject:
   - component: {fileID: 1723823677}
   m_Layer: 0
   m_Name: Point Light
-  m_TagString: Untagged
+  m_TagString: pointLights
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47757,7 +47751,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1805192438}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -33.17, y: -5.6152525, z: 4.729987}
+  m_LocalPosition: {x: -33.17, y: -7.270001, z: 4.729987}
   m_LocalScale: {x: 0.40376258, y: 0.40376258, z: 0.40376258}
   m_Children: []
   m_Father: {fileID: 601742555}
@@ -48337,7 +48331,7 @@ GameObject:
   - component: {fileID: 1850119975}
   m_Layer: 0
   m_Name: Point Light
-  m_TagString: Untagged
+  m_TagString: pointLights
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -50379,11 +50373,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 134650, guid: ce816f2e6abb0504092c23ed9b970dfd,
     type: 2}
   m_PrefabInternal: {fileID: 1573944434}
---- !u!4 &1936932263 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 481164, guid: ce816f2e6abb0504092c23ed9b970dfd,
-    type: 2}
-  m_PrefabInternal: {fileID: 1573944434}
 --- !u!135 &1936932264
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -50410,10 +50399,9 @@ MonoBehaviour:
   grabBegin: 0.55
   grabEnd: 0.35
   m_parentHeldObject: 0
-  m_gripTransform: {fileID: 1936932263}
-  m_grabVolumes:
-  - {fileID: 1936932264}
-  m_controller: 2
+  m_gripTransform: {fileID: 0}
+  m_grabVolumes: []
+  m_controller: 0
   m_parentTransform: {fileID: 0}
 --- !u!54 &1936932266
 Rigidbody:
@@ -50578,7 +50566,7 @@ GameObject:
   - component: {fileID: 1942904703}
   m_Layer: 0
   m_Name: Point Light
-  m_TagString: Untagged
+  m_TagString: pointLights
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -52408,7 +52396,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2010975410}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -44.989998, y: -5.6152525, z: 20.97}
+  m_LocalPosition: {x: -44.989998, y: -7.270001, z: 20.97}
   m_LocalScale: {x: 0.40376258, y: 0.40376258, z: 0.40376258}
   m_Children: []
   m_Father: {fileID: 601742555}
@@ -53117,7 +53105,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2034866103}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -45.19, y: -5.6152525, z: 23.11}
+  m_LocalPosition: {x: -45.19, y: -7.270001, z: 23.11}
   m_LocalScale: {x: 0.40376258, y: 0.40376258, z: 0.40376258}
   m_Children: []
   m_Father: {fileID: 601742555}
@@ -53189,7 +53177,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2045825805}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -42.77, y: -5.6152525, z: 7.000575}
+  m_LocalPosition: {x: -42.77, y: -7.270001, z: 7.000575}
   m_LocalScale: {x: 0.40376258, y: 0.40376258, z: 0.40376258}
   m_Children: []
   m_Father: {fileID: 601742555}
@@ -54119,7 +54107,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2071777699}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -42.79, y: -5.6152525, z: 23.110008}
+  m_LocalPosition: {x: -42.79, y: -7.270001, z: 23.110008}
   m_LocalScale: {x: 0.40376258, y: 0.40376258, z: 0.40376258}
   m_Children: []
   m_Father: {fileID: 601742555}
@@ -55997,7 +55985,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2124338664}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -40.25, y: -5.6152525, z: 4.729987}
+  m_LocalPosition: {x: -40.25, y: -7.270001, z: 4.729987}
   m_LocalScale: {x: 0.40376258, y: 0.40376258, z: 0.40376258}
   m_Children: []
   m_Father: {fileID: 601742555}
