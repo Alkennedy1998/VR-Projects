@@ -32,8 +32,7 @@ public class ButtonPress : MonoBehaviour
 
 
 
-        GameObject[] mapLights = GameObject.FindGameObjectsWithTag("mapLights");
-        Debug.Log(mapLights[0]);
+        //GameObject[] mapLights = GameObject.FindGameObjectsWithTag("mapLights");
 
         startPosition = transform.parent.position;
         endPosition = transform.parent.position+Vector3.up*moveDistance;
@@ -44,26 +43,13 @@ public class ButtonPress : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        currentLerpTime += Time.deltaTime;
-        if (currentLerpTime > lerpTime)
-        {
-            currentLerpTime = lerpTime;
-        }
 
-        //lerp!
-        float perc = currentLerpTime / lerpTime;
-        //transform.position = Vector3.Lerp(startPosition, endPosition, perc);
-    
 }
 
     void OnTriggerEnter(Collider col)
     {
 
-        //Begin Lerp
-        currentLerpTime = 0f;
-        //Randomly select explosion position from an array of 14 different positions
-
-
+        Debug.Log("testtst");
         GameObject parent = GameObject.Find("Explosions");
         List<Vector3> locations = new List<Vector3>();
         foreach(Transform child in parent.transform)
@@ -100,7 +86,7 @@ public class ButtonPress : MonoBehaviour
         int lightRange = 0;
         int oneOrTwo = Random.Range(0, 1);
         //int lightRange = Random.Range(0, mapLights.Length);
-        Debug.Log(mapLights[0]);
+        //Debug.Log(mapLights[0]);
 
         if (oneOrTwo == 0)
         {
@@ -120,14 +106,14 @@ public class ButtonPress : MonoBehaviour
 
         }
         
-        isTriggered = 1;
+        transform.parent.position=endPosition;
 
     }
     
    
     void OnTriggerExit(Collider col)
     {
-        isTriggered = 2;
+        transform.parent.position = startPosition;
     }
 }
 
