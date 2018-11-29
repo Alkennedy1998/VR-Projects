@@ -44,7 +44,7 @@ public class ButtonPress : MonoBehaviour
     void Update()
     {
 
-}
+    }
 
     void OnTriggerEnter(Collider col)
     {
