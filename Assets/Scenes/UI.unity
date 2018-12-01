@@ -197,8 +197,8 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 119650870}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 3.418}
-  m_LocalScale: {x: 0.002693464, y: 0.003470922, z: 0.0029087001}
+  m_LocalPosition: {x: 0, y: 0, z: 3.027}
+  m_LocalScale: {x: 0.004293651, y: 0.0044116797, z: 0.004636759}
   m_Children:
   - {fileID: 734943125}
   m_Father: {fileID: 0}
@@ -206,7 +206,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 2.222, y: 0.329}
+  m_AnchoredPosition: {x: 2.482, y: -0.084}
   m_SizeDelta: {x: 563, y: 639}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &208615234
@@ -237,7 +237,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f1a9a1d119a5944aacfb87d1ec283a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rayTransform: {fileID: 0}
+  rayTransform: {fileID: 1457330877}
   joyPadClickButton: 1
   gazeClickKey: 32
   performSphereCastForGazepointer: 0
@@ -349,7 +349,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Start the Game
 --- !u!222 &255849144
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -546,6 +546,7 @@ GameObject:
   - component: {fileID: 734943128}
   - component: {fileID: 734943127}
   - component: {fileID: 734943126}
+  - component: {fileID: 734943129}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -561,7 +562,7 @@ RectTransform:
   m_GameObject: {fileID: 734943124}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.3831, y: 5.0364213, z: 3.3831}
+  m_LocalScale: {x: 3.3831, y: 3.9488566, z: 3.3831}
   m_Children:
   - {fileID: 255849142}
   m_Father: {fileID: 119650874}
@@ -611,12 +612,12 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 734943124}
-        m_MethodName: 
+      - m_Target: {fileID: 734943129}
+        m_MethodName: ChangeScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -643,8 +644,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -658,6 +659,17 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 734943124}
   m_CullTransparentMesh: 0
+--- !u!114 &734943129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 734943124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25a0f0d8190b6c24ca70143d41b58e95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &796872465
 Prefab:
   m_ObjectHideFlags: 0
@@ -1106,7 +1118,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1600030334}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -3.637, y: -3.75, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1764760936}
