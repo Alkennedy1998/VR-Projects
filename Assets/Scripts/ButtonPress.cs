@@ -25,6 +25,8 @@ public class ButtonPress : MonoBehaviour
 
     private int isTriggered = 0;
 
+    private float secondCounter;
+    private float secondCounter2;
 
     void Start()
     {
@@ -32,7 +34,15 @@ public class ButtonPress : MonoBehaviour
 
 
 
-        //GameObject[] mapLights = GameObject.FindGameObjectsWithTag("mapLights");
+        mapLights = GameObject.FindGameObjectsWithTag("mapLights");
+
+        foreach (GameObject light in mapLights)
+        {
+            light.transform.Find("Point Light").gameObject.GetComponent<Light>().color = Color.white;
+            light.transform.Find("Point Light").gameObject.GetComponent<Light>().intensity = 0.8f;
+            light.transform.Find("Point Light").gameObject.GetComponent<Light>().range = 5;
+        }
+
 
         startPosition = transform.parent.position;
         endPosition = transform.parent.position+Vector3.up*moveDistance;
@@ -43,13 +53,21 @@ public class ButtonPress : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        secondCounter += Time.deltaTime;
+        secondCounter2 += Time.deltaTime;
     }
 
     void OnTriggerEnter(Collider col)
     {
-
-        Debug.Log("testtst");
+        if (secondCounter < 2)
+        {
+            return;
+        }
+        if (secondCounter2 < 0.3)
+        {
+            return;
+        }
+        secondCounter2 = 0;
         GameObject parent = GameObject.Find("Explosions");
         List<Vector3> locations = new List<Vector3>();
         foreach(Transform child in parent.transform)
@@ -70,7 +88,8 @@ public class ButtonPress : MonoBehaviour
         foreach (Collider hit in colliders)
         {
             if (hit.gameObject!=null&&hit.gameObject.CompareTag("ragdoll"))
-            { 
+            {
+                Debug.Log("explosion hit");
                 //Explosions and all things included
                hit.attachedRigidbody.useGravity = true;            
           
@@ -83,22 +102,21 @@ public class ButtonPress : MonoBehaviour
         }
 
         //Turn a random light on
-        int lightRange = 0;
-        int oneOrTwo = Random.Range(0, 1);
-        //int lightRange = Random.Range(0, mapLights.Length);
-        //Debug.Log(mapLights[0]);
+        int oneOrTwo = Random.Range(0, 2);
+        int lightRange = Random.Range(0, mapLights.Length);
+        Debug.Log(mapLights[0]);
 
         if (oneOrTwo == 0)
         {
-            //mapLights[lightRange].transform.Find("Point Light").gameObject.Light.color = Color.red;
+            mapLights[lightRange].transform.Find("Point Light").gameObject.GetComponent<Light>().color = Color.red;
             //mapLights[lightRange].transform.GetChild(3).gameObject.GetComponent<Light>().intensity = 100;
-            //mapLights[lightRange].GetComponent<Light>().intensity = 100;
+           // mapLights[lightRange].GetComponent<Light>().intensity = 100;
             //mapLights[lightRange].GetComponent<Light>().color =Color.red;
         }
-        else
+        if(oneOrTwo == 1)
         {
-            //mapLights[lightRange].transform.Find("Point Light").gameObject.Light.color = Color.white;
-            //mapLights[lightRange].transform.Find("Point Light").gameObject.Intensity = 100;
+            mapLights[lightRange].transform.Find("Point Light").gameObject.GetComponent<Light>().color = Color.white;
+            //mapLights[lightRange].transform.Find("Point Light").gameObject.GetComponent<Light>().intensity = 100;
             //mapLights[lightRange].transform.GetChild(3).Intensity = 100;
             //mapLights[lightRange].GetComponent<Light>().intensity = 100;
             //mapLights[lightRange].GetComponent<Light>().color = Color.white;
