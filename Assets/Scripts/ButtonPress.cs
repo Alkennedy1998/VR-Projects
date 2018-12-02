@@ -11,7 +11,7 @@ public class ButtonPress : MonoBehaviour
     public ConstantForce gravity;
     private Vector3 gForce = new Vector3(0.0f, -6.81f, 0.0f);
     // Use this for initialization
-    private readonly float radius = 0.9f;
+    private readonly float radius = 1.9f;
     private float power = 150000;
 
     public Vector3 startPosition;

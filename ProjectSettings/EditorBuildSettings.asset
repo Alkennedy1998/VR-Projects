@@ -6,9 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/MainScene.unity
+    guid: c85e5df8750cd4d41b30efc2a15a9e9d
+  - enabled: 1
     path: Assets/Scenes/UI.unity
     guid: 7244bf7e79314b24aa661cf75f5e4b0c
-  - enabled: 1
-    path: Assets/Oculus/VR/Scenes/MainScene.unity
-    guid: c85e5df8750cd4d41b30efc2a15a9e9d
   m_configObjects: {}
